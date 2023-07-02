@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 670
-  Top = 284
+  Left = 330
+  Top = 249
   Width = 928
   Height = 583
   Caption = 'Form1'
@@ -355,6 +355,7 @@ object Form1: TForm1
     Top = 440
     Width = 817
     Height = 185
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -366,16 +367,27 @@ object Form1: TForm1
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
-    Port = 0
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'D:\Delphi7\tugasakhir\libmysql.dll'
     Left = 840
     Top = 40
   end
   object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from data_siswa')
     Params = <>
     Left = 840
     Top = 104
   end
   object ds1: TDataSource
+    DataSet = zqry1
     Left = 840
     Top = 168
   end
