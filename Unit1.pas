@@ -143,11 +143,11 @@ begin
 
 if edt1.Text =''then
 begin
-  ShowMessage('NISN TIDAK BOLEH KOSONG');
+  ShowMessage('NIS TIDAK BOLEH KOSONG');
   end else
 if edt2.Text =''then
 begin
-  ShowMessage('NIS TIDAK BOLEH KOSONG');
+  ShowMessage('NISN TIDAK BOLEH KOSONG');
   end else
 if edt3.Text =''then
 begin
@@ -175,7 +175,7 @@ begin
   end else
 if edt9.Text =''then
 begin
-  ShowMessage('WALI KELAS TIDAK BOLEH KOSONG');
+  ShowMessage('ID WALI KELAS TIDAK BOLEH KOSONG');
   end else
 if edt10.Text =''then
 begin
@@ -183,7 +183,7 @@ begin
   end else
 if edt11.Text =''then
 begin
-  ShowMessage('NO TELPON TIDAK BOLEH KOSONG');
+  ShowMessage('NO TELEPON TIDAK BOLEH KOSONG');
   end else
 if edt12.Text =''then
 begin
