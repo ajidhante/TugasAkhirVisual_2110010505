@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 330
-  Top = 249
+  Left = 246
+  Top = 152
   Width = 928
   Height = 583
   Caption = 'Form1'
@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -208,33 +209,12 @@ object Form1: TForm1
       Height = 21
       TabOrder = 0
     end
-    object edt2: TEdit
-      Left = 128
-      Top = 64
-      Width = 121
-      Height = 21
-      TabOrder = 1
-    end
-    object edt3: TEdit
-      Left = 128
-      Top = 96
-      Width = 121
-      Height = 21
-      TabOrder = 2
-    end
-    object edt4: TEdit
-      Left = 128
-      Top = 128
-      Width = 121
-      Height = 21
-      TabOrder = 3
-    end
     object edt5: TEdit
       Left = 128
       Top = 160
       Width = 121
       Height = 21
-      TabOrder = 4
+      TabOrder = 1
     end
     object dtp1: TDateTimePicker
       Left = 128
@@ -243,66 +223,81 @@ object Form1: TForm1
       Height = 21
       Date = 45110.031955254630000000
       Time = 45110.031955254630000000
-      TabOrder = 5
-    end
-    object cbb1: TComboBox
-      Left = 128
-      Top = 224
-      Width = 145
-      Height = 21
-      ItemHeight = 13
-      TabOrder = 6
-      Text = 'Pilih Jenis Kelamin'
-    end
-    object cbb2: TComboBox
-      Left = 456
-      Top = 32
-      Width = 145
-      Height = 21
-      ItemHeight = 13
-      TabOrder = 7
-      Text = 'Pilih Jenis Kelamin'
-    end
-    object cbb3: TComboBox
-      Left = 456
-      Top = 64
-      Width = 145
-      Height = 21
-      ItemHeight = 13
-      TabOrder = 8
-      Text = 'Pilih Jenis Kelamin'
+      TabOrder = 2
     end
     object edt6: TEdit
-      Left = 456
+      Left = 128
+      Top = 224
+      Width = 121
+      Height = 21
+      TabOrder = 3
+    end
+    object edt7: TEdit
+      Left = 464
+      Top = 32
+      Width = 121
+      Height = 21
+      TabOrder = 4
+    end
+    object edt8: TEdit
+      Left = 464
+      Top = 64
+      Width = 121
+      Height = 21
+      TabOrder = 5
+    end
+    object edt9: TEdit
+      Left = 464
       Top = 96
+      Width = 121
+      Height = 21
+      TabOrder = 6
+    end
+    object edt10: TEdit
+      Left = 464
+      Top = 128
+      Width = 121
+      Height = 21
+      TabOrder = 7
+    end
+    object edt11: TEdit
+      Left = 464
+      Top = 160
+      Width = 121
+      Height = 21
+      TabOrder = 8
+    end
+    object edt12: TEdit
+      Left = 464
+      Top = 192
       Width = 121
       Height = 21
       TabOrder = 9
     end
-    object edt7: TEdit
-      Left = 456
+    object edt4: TEdit
+      Left = 128
       Top = 128
       Width = 121
       Height = 21
       TabOrder = 10
     end
-    object edt8: TEdit
-      Left = 456
-      Top = 160
+    object edt2: TEdit
+      Left = 128
+      Top = 64
       Width = 121
       Height = 21
       TabOrder = 11
     end
-    object edt9: TEdit
-      Left = 456
-      Top = 192
+    object edt3: TEdit
+      Left = 128
+      Top = 96
       Width = 121
       Height = 21
       TabOrder = 12
     end
     object btn1: TButton
-      Left = 96
-      Top = 272
+      Left = 88
+      Top = 288
       Width = 89
       Height = 41
       Caption = 'BARU'
@@ -310,40 +305,41 @@ object Form1: TForm1
       OnClick = btn1Click
     end
     object btn2: TButton
-      Left = 208
-      Top = 272
+      Left = 200
+      Top = 288
       Width = 89
       Height = 41
       Caption = 'SIMPAN'
       TabOrder = 14
+      OnClick = btn2Click
     end
     object btn3: TButton
-      Left = 320
-      Top = 272
+      Left = 312
+      Top = 288
       Width = 89
       Height = 41
       Caption = 'UBAH'
       TabOrder = 15
     end
     object btn4: TButton
-      Left = 432
-      Top = 272
+      Left = 424
+      Top = 288
       Width = 89
       Height = 41
       Caption = 'HAPUS'
       TabOrder = 16
     end
     object btn5: TButton
-      Left = 544
-      Top = 272
+      Left = 536
+      Top = 288
       Width = 89
       Height = 41
       Caption = 'BATAL'
       TabOrder = 17
     end
     object btn6: TButton
-      Left = 656
-      Top = 272
+      Left = 648
+      Top = 288
       Width = 89
       Height = 41
       Caption = 'LAPORAN'
