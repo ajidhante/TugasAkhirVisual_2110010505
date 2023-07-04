@@ -41,6 +41,7 @@ type
     frxdbdtst1: TfrxDBDataset;
     dbgrd1: TDBGrid;
     procedure btn1Click(Sender: TObject);
+    procedure posisiawal;
   private
     { Private declarations }
   public
@@ -69,6 +70,24 @@ begin
   edt6.Enabled := True;
   edt7.Enabled := True;
   dtp1.Enabled := True;
+end;
+
+procedure TForm3.posisiawal;
+begin
+bersih;
+  btn1.Enabled := True;
+  btn2.Enabled := False;
+  btn3.Enabled := False;
+  btn4.Enabled := False;
+  btn5.Enabled := False;
+  edt1.Enabled := False;
+  edt2.Enabled := False;
+  edt3.Enabled := False;
+  edt4.Enabled := False;
+  edt5.Enabled := False;
+  edt6.Enabled := False;
+  edt7.Enabled := False;
+  dtp1.Enabled := False;
 end;
 
 end.
