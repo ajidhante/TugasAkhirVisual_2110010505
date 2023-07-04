@@ -210,6 +210,7 @@ object Form3: TForm3
       Height = 41
       Caption = 'SIMPAN'
       TabOrder = 9
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 288
