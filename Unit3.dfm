@@ -201,6 +201,7 @@ object Form3: TForm3
       Height = 41
       Caption = 'BARU'
       TabOrder = 8
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 176
