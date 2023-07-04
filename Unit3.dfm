@@ -11,6 +11,7 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -219,6 +220,7 @@ object Form3: TForm3
       Height = 41
       Caption = 'UBAH'
       TabOrder = 10
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 400
@@ -227,6 +229,7 @@ object Form3: TForm3
       Height = 41
       Caption = 'HAPUS'
       TabOrder = 11
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 512
@@ -235,6 +238,7 @@ object Form3: TForm3
       Height = 41
       Caption = 'BATAL'
       TabOrder = 12
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 624
@@ -250,6 +254,7 @@ object Form3: TForm3
     Top = 408
     Width = 809
     Height = 120
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -261,16 +266,27 @@ object Form3: TForm3
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
-    Port = 0
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'D:\Delphi7\tugasakhir\libmysql.dll'
     Left = 824
     Top = 40
   end
   object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from tabel_catatan')
     Params = <>
     Left = 824
     Top = 88
   end
   object ds1: TDataSource
+    DataSet = zqry1
     Left = 824
     Top = 136
   end

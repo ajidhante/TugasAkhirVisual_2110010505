@@ -44,6 +44,10 @@ type
     procedure posisiawal;
     procedure bersih;
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +56,7 @@ type
 
 var
   Form3: TForm3;
+  id : string;
 
 implementation
 
@@ -139,14 +144,64 @@ begin
 end;
 
 zqry1.SQL.Clear;
-zqry1.SQL.Add('insert into table_catatan values(null,"'+formatdatetime('yyyy-mm-dd',dtp1.date)+'","'+edt1.text+'","'+edt2.text+'","'+edt3.text+'","'+edt4.text+'","'+edt5.text+'","'+edt6.text+'","'+edt7.text+'")');
+zqry1.SQL.Add('insert into tabel_catatan values(null,"'+formatdatetime('yyyy-mm-dd',dtp1.date)+'","'+edt1.text+'","'+edt2.text+'","'+edt3.text+'","'+edt4.text+'","'+edt5.text+'","'+edt6.text+'","'+edt7.text+'")');
 zqry1.ExecSQL;
 
 zqry1.SQL.Clear;
-zqry1.SQL.Add('select * from table_catatan');
+zqry1.SQL.Add('select * from tabel_catatan');
 zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
+end;
+
+procedure TForm3.btn3Click(Sender: TObject);
+begin
+if (edt1.Text= '')or(edt2.Text= '')or(edt3.Text= '')or(edt4.Text= '')or(edt5.Text= '')or(edt6.Text= '')or(edt7.Text= '') then
+ begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+
+
+begin
+  ShowMessage('Data Berhasil Di Update');
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('Update tabel_catatan set tanggal="'+formatdatetime('yyyy-mm-dd',dtp1.date)+'", semester="'+edt1.Text+'",id _siswa="'+edt2.Text+'",id_walikelas="'+edt3.Text+'",id_ortuatauwali="'+edt4.Text+'",id_poin="'+edt5.Text+'",keterangan="'+edt6.Text+'",status="'+edt7.Text+'" where id="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select*from tabel_catatan');
+  zqry1.Open;
+  posisiawal;
+end;
+end;
+
+procedure TForm3.btn4Click(Sender: TObject);
+begin
+if MessageDlg('Apakah Anda Yakin Menghapus Data Ini?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from table_catatan where id ="'+id+'"');
+  zqry1.ExecSQL;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from table_catatan');
+  zqry1.Open;
+  ShowMessage('Data Berhasil Dihapus');
+  posisiawal;
+end else
+begin
+  ShowMessage('Data Batal Dihapus');
+  posisiawal;
+end;
+end;
+
+procedure TForm3.btn5Click(Sender: TObject);
+begin
+  bersih;
+end;
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+   posisiawal;
 end;
 
 end.
