@@ -42,6 +42,7 @@ type
     dbgrd1: TDBGrid;
     procedure btn1Click(Sender: TObject);
     procedure posisiawal;
+    procedure bersih;
   private
     { Private declarations }
   public
@@ -54,6 +55,18 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm3.bersih;
+begin
+edt1.Clear;
+edt2.Clear;
+edt3.Clear;
+edt4.Clear;
+edt5.Clear;
+edt6.Clear;
+edt7.Clear;
+dtp1.CleanupInstance;
+end;
 
 procedure TForm3.btn1Click(Sender: TObject);
 begin
