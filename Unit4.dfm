@@ -199,6 +199,7 @@ object Form4: TForm4
       Height = 41
       Caption = 'BARU'
       TabOrder = 8
+      OnClick = btn6Click
     end
     object btn1: TButton
       Left = 192
