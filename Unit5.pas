@@ -26,6 +26,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure bersih;
+    procedure posisiawal;
   private
     { Private declarations }
   public
@@ -106,6 +107,19 @@ begin
 edt1.Clear;
 edt2.Clear;
 edt3.Clear;
+end;
+
+procedure TForm5.posisiawal;
+begin
+bersih;
+  btn1.Enabled := True;
+  btn2.Enabled := False;
+  btn3.Enabled := False;
+  btn4.Enabled := False;
+  btn5.Enabled := False;
+  edt1.Enabled := False;
+  edt2.Enabled := False;
+  edt3.Enabled := False;
 end;
 
 end.
