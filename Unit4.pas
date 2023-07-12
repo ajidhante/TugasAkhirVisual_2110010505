@@ -36,6 +36,8 @@ type
     procedure btn6Click(Sender: TObject);
     procedure posisiawal;
     procedure bersih;
+    procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -91,6 +93,73 @@ begin
   edt5.Enabled := False;
   edt6.Enabled := False;
   edt7.Enabled := False;
+end;
+
+procedure TForm4.btn1Click(Sender: TObject);
+begin
+if edt1.Text =''then
+begin
+  ShowMessage('NIK TIDAK BOLEH KOSONG');
+  end else
+if edt2.Text =''then
+begin
+  ShowMessage('NAMA TIDAK BOLEH KOSONG');
+  end else
+if edt3.Text =''then
+begin
+  ShowMessage('JENIS KELAMIN TIDAK BOLEH KOSONG');
+  end else
+if edt4.Text =''then
+begin
+  ShowMessage('PENDIDIKAN TIDAK BOLEH KOSONG');
+  end else
+if edt5.Text =''then
+begin
+  ShowMessage('NO TELPON LAHIR TIDAK BOLEH KOSONG');
+  end else
+if edt6.Text =''then
+begin
+  ShowMessage('PEKERJAAN KELAMIN TIDAK BOLEH KOSONG');
+  end else
+if edt7.Text =''then
+begin
+  ShowMessage('STATUS TIDAK BOLEH KOSONG');
+  end else
+begin
+  //simpan
+end;
+
+
+zqry1.SQL.Clear;
+zqry1.SQL.Add('insert into tabel_ortuatauwali values(null,"'+edt1.text+'","'+edt2.text+'","'+edt3.text+'","'+edt4.text+'","'+edt5.text+'","'+edt6.text+'","'+edt7.text+'","'+edt8.text+'")');
+zqry1.ExecSQL;
+
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from tabel_ortuatauwali');
+zqry1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
+
+procedure TForm4.btn2Click(Sender: TObject);
+begin
+if (edt1.Text= '')or(edt2.Text= '')or(edt3.Text= '')or(edt4.Text= '')or(edt5.Text= '')or(edt6.Text= '')or(edt7.Text= '')or(edt8.Text= '') then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+
+begin
+  ShowMessage('Data Berhasil Di Update');
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('Update data_wali_kelas set nik="'+edt1.Text+'",nama="'+edt2.Text+'",jenis_kelamin="'+edt3.Text+'",pendidikan="'+edt4.Text+'",mata_pelajaran="'+edt5.Text+'",tingkat_kelas="'+edt6.Text+'",jabatan="'+edt7.Text+'",no_telpon="'+edt8.Text+'" where id ="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select*from data_wali_kelas');
+  zqry1.Open;
+  posisiawal;
+end;
+
 end;
 
 end.
