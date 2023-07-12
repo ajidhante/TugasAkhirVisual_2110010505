@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -126,6 +127,7 @@ object Form5: TForm5
       Height = 41
       Caption = 'HAPUS'
       TabOrder = 6
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 552
