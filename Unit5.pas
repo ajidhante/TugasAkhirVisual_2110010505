@@ -25,6 +25,7 @@ type
     procedure btn6Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure bersih;
   private
     { Private declarations }
   public
@@ -98,6 +99,13 @@ begin
   zqry1.Open;
   posisiawal;
   end;
+end;
+
+procedure TForm5.bersih;
+begin
+edt1.Clear;
+edt2.Clear;
+edt3.Clear;
 end;
 
 end.
