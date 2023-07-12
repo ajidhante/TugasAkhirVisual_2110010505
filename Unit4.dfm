@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 145
-  Top = 159
+  Left = 134
+  Top = 151
   Width = 928
   Height = 580
   Caption = 'Form4'
@@ -251,11 +251,67 @@ object Form4: TForm4
     Top = 408
     Width = 801
     Height = 120
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 816
+    Top = 32
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'D:\Delphi7\tugasakhir\libmysql.dll'
+    Left = 816
+    Top = 80
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from tabel_ortuatauwali')
+    Params = <>
+    Left = 816
+    Top = 136
+  end
+  object frxrprt1: TfrxReport
+    Version = '4.0.11'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45119.423253715280000000
+    ReportOptions.LastChange = 45119.423253715280000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 848
+    Top = 192
+    Datasets = <>
+    Variables = <>
+    Style = <>
+  end
+  object frxdbdtst1: TfrxDBDataset
+    UserName = 'frxdbdtst1'
+    CloseDataSource = False
+    Left = 856
+    Top = 240
   end
 end
