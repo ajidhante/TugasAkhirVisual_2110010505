@@ -48,6 +48,7 @@ type
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -202,6 +203,11 @@ end;
 procedure TForm3.FormCreate(Sender: TObject);
 begin
    posisiawal;
+end;
+
+procedure TForm3.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport();
 end;
 
 end.
