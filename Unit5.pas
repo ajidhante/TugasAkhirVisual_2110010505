@@ -29,6 +29,7 @@ type
     procedure posisiawal;
     procedure FormShow(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -146,6 +147,11 @@ begin
   ShowMessage('Data Batal Dihapus');
   posisiawal;
 end;
+end;
+
+procedure TForm5.btn4Click(Sender: TObject);
+begin
+bersih;
 end;
 
 end.
