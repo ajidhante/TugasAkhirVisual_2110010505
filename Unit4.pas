@@ -126,16 +126,20 @@ begin
   end else
 if edt5.Text =''then
 begin
-  ShowMessage('NO TELPON LAHIR TIDAK BOLEH KOSONG');
+  ShowMessage('NO TELEPON TIDAK BOLEH KOSONG');
   end else
 if edt6.Text =''then
 begin
-  ShowMessage('PEKERJAAN KELAMIN TIDAK BOLEH KOSONG');
+  ShowMessage('ALAMAT TIDAK BOLEH KOSONG');
   end else
 if edt7.Text =''then
 begin
-  ShowMessage('STATUS TIDAK BOLEH KOSONG');
+  ShowMessage('PEKERJAAN TIDAK BOLEH KOSONG');
   end else
+if edt8.Text =''then
+begin
+  ShowMessage('STATUS TIDAK BOLEH KOSONG');
+end;
 begin
   //simpan
 end;
