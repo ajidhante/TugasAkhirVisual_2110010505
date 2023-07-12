@@ -108,6 +108,7 @@ object Form5: TForm5
       Height = 41
       Caption = 'SIMPAN'
       TabOrder = 4
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 312

@@ -23,6 +23,7 @@ type
     btn4: TButton;
     btn5: TButton;
     procedure btn6Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,6 +47,35 @@ btn1.Enabled := False;
   edt1.Enabled := True;
   edt2.Enabled := True;
   edt3.Enabled := True;
+end;
+
+procedure TForm5.btn1Click(Sender: TObject);
+begin
+if edt1.Text =''then
+begin
+  ShowMessage('NAMA POINT TIDAK BOLEH KOSONG');
+  end else
+if edt2.Text =''then
+begin
+  ShowMessage('TOTAL TIDAK BOLEH KOSONG');
+  end else
+if edt3.Text =''then
+begin
+  ShowMessage('KETERANGAN TIDAK BOLEH KOSONG');
+  end else
+begin
+  //simpan
+end;
+
+zqry1.SQL.Clear;
+zqry1.SQL.Add('insert into tabel_poin values(null,"'+edt1.text+'","'+edt2.text+'","'+edt3.text+'")');
+zqry1.ExecSQL;
+
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from tabel_poin');
+zqry1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
 end;
 
 end.
