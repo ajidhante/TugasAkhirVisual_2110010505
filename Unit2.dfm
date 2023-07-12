@@ -245,6 +245,7 @@ object Form2: TForm2
       Height = 41
       Caption = 'LAPORAN'
       TabOrder = 13
+      OnClick = btn6Click
     end
   end
   object dbgrd1: TDBGrid
