@@ -24,6 +24,7 @@ type
     btn5: TButton;
     procedure btn6Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,6 +33,7 @@ type
 
 var
   Form5: TForm5;
+  id : string;
 
 implementation
 
@@ -76,6 +78,26 @@ zqry1.SQL.Add('select * from tabel_poin');
 zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
+end;
+
+procedure TForm5.btn2Click(Sender: TObject);
+begin
+if (edt1.Text= '')or(edt2.Text= '')or(edt3.Text= '') then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+
+begin
+  ShowMessage('Data Berhasil Di Update');
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('Update tabel_poin set nama_poin="'+edt1.Text+'",total="'+edt2.Text+'",keterangan="'+edt3.Text+'" where id ="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select*from tabel_poin');
+  zqry1.Open;
+  posisiawal;
+  end;
 end;
 
 end.

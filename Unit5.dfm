@@ -117,6 +117,7 @@ object Form5: TForm5
       Height = 41
       Caption = 'UBAH'
       TabOrder = 5
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 432
